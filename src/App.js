@@ -4,7 +4,7 @@ import Navigation from './components/Navigation';
 import './App.css';
 import * as ROUTES from './constants/routes';
 import LoginPage from './components/LoginPage';
-// import EventsPage from './components/EventsPage';
+import EventsPage from './components/EventsPage';
 import { withFirebase } from './firebase';
 
 class App extends React.Component {
@@ -36,7 +36,7 @@ class App extends React.Component {
           <hr/>
           <p>HELLO WORLD</p>
           <Route path={ROUTES.SIGN_IN} component={LoginPage} />
-          {/*<Route path={ROUTES.ADMIN} component={EventsPage} />*/}
+          <Route path={ROUTES.ADMIN} component={EventsPage} />
         </div>
       </Router>
     );

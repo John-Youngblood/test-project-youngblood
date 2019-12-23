@@ -37,19 +37,10 @@ class Firebase {
   addEvent = (cost,date) =>
     this.db.collection('events').add({
       cost,date
-    }).then(function(docRef) {
-      console.log("Document written with ID: ", docRef.id);
-    })
-    .catch(function(error) {
-      console.error("Error adding document: ", error);
     });
 
   getEvents = () =>
-    this.db.collection("events").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data()}`);
-    });
-  });
+    this.db.collection("events").get()
 }
 
 export default Firebase;
